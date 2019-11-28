@@ -5,9 +5,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
-
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -20,6 +22,7 @@ import com.training.pom.PreLoginPOM;
 import com.training.pom.ProductPOM;
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
+import com.trianing.waits.WaitTypes;
 public class TC02_ProductAdditionTest {
 	private WebDriver driver;
 	private String userUrl;
@@ -29,6 +32,7 @@ public class TC02_ProductAdditionTest {
 	private GenericMethods gc;
 	private static Properties properties;
 	private ScreenShot screenShot;
+	private WaitTypes waitType;
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws IOException {
@@ -46,6 +50,7 @@ public class TC02_ProductAdditionTest {
 		cartPage=new CartPOM(driver);
 		screenShot = new ScreenShot(driver); 
 		gc=new GenericMethods(driver);
+		waitType= new WaitTypes(driver);
 		// open the browser 
 		driver.get(userUrl);
 		Thread.sleep(5000L);
@@ -77,8 +82,11 @@ public class TC02_ProductAdditionTest {
 		productPage.clickVitaeProductLink();
 		Thread.sleep(5000L);
 		cartPage.AddtoCartBtn();
-		screenShot.captureScreenShot("success message page");
-		Thread.sleep(10000L);
+		waitType.waitForElement(By.xpath("//*[starts-with(@id,'noty_alert')]/div/div[1]/h3"), 20);
+		gc.assertText("Shopping Cart updated!", "//*[starts-with(@id,'noty_alert')]/div/div[1]/h3", "xpath","the alert is not displayed" );
+		//Thread.sleep(2000L);
+	    screenShot.captureScreenShot("success message page1");
+		Thread.sleep(7000L);
 		cartPage.CartIconDetect();
 		Thread.sleep(5000L);
 		screenShot.captureScreenShot("View cart page");
