@@ -6,7 +6,9 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -125,7 +127,54 @@ public class GenericMethods {
 		}
 		
 	}
-}
+	
+	public void scrollToElement(String locator, String type) {
+		Point p;
+		JavascriptExecutor js;
+		int xcords;
+		String xcoordinates ;
+		int ycords;
+		String ycoordinates;
+	
+		
+		type = type.toLowerCase();
+		
+		if(type.equals("id")){
+			p = driver.findElement(By.id(locator)).getLocation();
+			xcords = p.x;
+			xcoordinates = String.valueOf(xcords);
+			ycords =p.y;
+			ycoordinates = String.valueOf(ycords);
+			js = (JavascriptExecutor)driver;
+			js.executeScript("window.scrollTo(xcoordinates, ycoordinates)", "");
+		}else if(type.equals("name")){
+			p = driver.findElement(By.name(locator)).getLocation();
+			xcords = p.x;
+			xcoordinates = String.valueOf(xcords);
+			ycords =p.y;
+			ycoordinates = String.valueOf(ycords);
+			js = (JavascriptExecutor)driver;
+			js.executeScript("window.scrollTo(xcoordinates, ycoordinates)", "");
+		}else if(type.equals("xpath")){
+			p = driver.findElement(By.xpath(locator)).getLocation();
+			xcords = p.x;
+			xcoordinates = String.valueOf(xcords);
+			ycords =p.y;
+			ycoordinates = String.valueOf(ycords);
+			js = (JavascriptExecutor)driver;
+			js.executeScript("window.scrollTo(xcoordinates, ycoordinates)", "");
+		}else if(type.equals("class")){
+			p = driver.findElement(By.className(locator)).getLocation();
+			xcords = p.x;
+			xcoordinates = String.valueOf(xcords);
+			ycords =p.y;
+			ycoordinates = String.valueOf(ycords);
+			js = (JavascriptExecutor)driver;
+			js.executeScript("window.scrollTo(xcoordinates, ycoordinates)", "");
+		}
+    
+	}
+	}
 
 	
 

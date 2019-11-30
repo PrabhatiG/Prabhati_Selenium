@@ -1,29 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="66567" started-at="2019-11-27T14:35:26Z" finished-at="2019-11-27T14:36:32Z">
+  <suite name="Default suite" duration-ms="47860" started-at="2019-11-30T07:23:33Z" finished-at="2019-11-30T07:24:21Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="66567" started-at="2019-11-27T14:35:26Z" finished-at="2019-11-27T14:36:32Z">
-      <class name="com.training.sanity.tests.TC03_ProductSearchTest">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.TC03_ProductSearchTest@3e6fa38a]" name="setUpBeforeClass" is-config="true" duration-ms="18" started-at="2019-11-27T14:35:26Z" finished-at="2019-11-27T14:35:26Z">
+    <test name="Default test" duration-ms="47860" started-at="2019-11-30T07:23:33Z" finished-at="2019-11-30T07:24:21Z">
+      <class name="com.training.regression.tests.TC04_InvalidCredentialsDiffDataTest">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.regression.tests.TC04_InvalidCredentialsDiffDataTest@66a3ffec]" name="setUpBeforeClass" is-config="true" duration-ms="15" started-at="2019-11-30T07:23:33Z" finished-at="2019-11-30T07:23:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.TC03_ProductSearchTest@3e6fa38a]" name="setUp" is-config="true" duration-ms="18398" started-at="2019-11-27T14:35:26Z" finished-at="2019-11-27T14:35:44Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.TC04_InvalidCredentialsDiffDataTest@66a3ffec]" name="setUp" is-config="true" duration-ms="10119" started-at="2019-11-30T07:23:34Z" finished-at="2019-11-30T07:23:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="productSelection()[pri:0, instance:com.training.sanity.tests.TC03_ProductSearchTest@3e6fa38a]" name="productSelection" duration-ms="46354" started-at="2019-11-27T14:35:44Z" finished-at="2019-11-27T14:36:31Z">
+        <test-method status="PASS" signature="invalidCredentialsTest(java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.TC04_InvalidCredentialsDiffDataTest@66a3ffec]" name="invalidCredentialsTest" duration-ms="1860" started-at="2019-11-30T07:23:44Z" data-provider="xls-inputs" finished-at="2019-11-30T07:23:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123456]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- productSelection -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.TC03_ProductSearchTest@3e6fa38a]" name="tearDown" is-config="true" duration-ms="1763" started-at="2019-11-27T14:36:31Z" finished-at="2019-11-27T14:36:32Z">
+        </test-method> <!-- invalidCredentialsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.TC04_InvalidCredentialsDiffDataTest@66a3ffec]" name="tearDown" is-config="true" duration-ms="1817" started-at="2019-11-30T07:23:46Z" finished-at="2019-11-30T07:23:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.TC03_ProductSearchTest -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.TC04_InvalidCredentialsDiffDataTest@66a3ffec]" name="setUp" is-config="true" duration-ms="7685" started-at="2019-11-30T07:23:47Z" finished-at="2019-11-30T07:23:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="invalidCredentialsTest(java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.TC04_InvalidCredentialsDiffDataTest@66a3ffec]" name="invalidCredentialsTest" duration-ms="1500" started-at="2019-11-30T07:23:55Z" data-provider="xls-inputs" finished-at="2019-11-30T07:23:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidCredentialsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.TC04_InvalidCredentialsDiffDataTest@66a3ffec]" name="tearDown" is-config="true" duration-ms="1767" started-at="2019-11-30T07:23:57Z" finished-at="2019-11-30T07:23:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.TC04_InvalidCredentialsDiffDataTest@66a3ffec]" name="setUp" is-config="true" duration-ms="8261" started-at="2019-11-30T07:23:58Z" finished-at="2019-11-30T07:24:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="invalidCredentialsTest(java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.TC04_InvalidCredentialsDiffDataTest@66a3ffec]" name="invalidCredentialsTest" duration-ms="1775" started-at="2019-11-30T07:24:07Z" data-provider="xls-inputs" finished-at="2019-11-30T07:24:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[manzoor]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidCredentialsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.TC04_InvalidCredentialsDiffDataTest@66a3ffec]" name="tearDown" is-config="true" duration-ms="1841" started-at="2019-11-30T07:24:08Z" finished-at="2019-11-30T07:24:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.regression.tests.TC04_InvalidCredentialsDiffDataTest@66a3ffec]" name="setUp" is-config="true" duration-ms="7940" started-at="2019-11-30T07:24:10Z" finished-at="2019-11-30T07:24:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="invalidCredentialsTest(java.lang.String, java.lang.String)[pri:0, instance:com.training.regression.tests.TC04_InvalidCredentialsDiffDataTest@66a3ffec]" name="invalidCredentialsTest" duration-ms="1348" started-at="2019-11-30T07:24:18Z" data-provider="xls-inputs" finished-at="2019-11-30T07:24:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin@123]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidCredentialsTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.regression.tests.TC04_InvalidCredentialsDiffDataTest@66a3ffec]" name="tearDown" is-config="true" duration-ms="1763" started-at="2019-11-30T07:24:20Z" finished-at="2019-11-30T07:24:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.training.regression.tests.TC04_InvalidCredentialsDiffDataTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
