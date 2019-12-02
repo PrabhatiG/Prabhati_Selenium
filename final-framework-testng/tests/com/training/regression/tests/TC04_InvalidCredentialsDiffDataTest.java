@@ -66,7 +66,7 @@ public class TC04_InvalidCredentialsDiffDataTest {
 		adminLoginPOM.clickLoginBtn();
 		String str=driver.findElement(By.xpath("//*[@id='content']/div/div/div/div/div[2]/div")).getText();
 		System.out.println(str);
-		//gc.assertText("No match for Username and/or Password.","//*[@id='content']/div/div/div/div/div[2]/div", "xpath", "The correct message is not displayed");
+		 gc.assertText("No match for Username and/or Password.","//*[@id='content']/div/div/div/div/div[2]/div", "xpath", "The correct message is not displayed");
 		screenShot.captureScreenShot("mismatch message");          
 	}
 

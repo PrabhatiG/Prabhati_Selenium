@@ -92,7 +92,7 @@ import com.training.pom.LoginPOM;
 		Thread.sleep(2000L);
 		screenShot.captureScreenShot("TC06_Category Saved");
 		Thread.sleep(5000L);
-		//gc.assertText("Success: You have modified categories!", "//*[@id=\"content\"]/div[2]/div[1]", "xpath", "Correct message not displayed");
+		gc.assertText("Success: You have modified categories!", "//*[@id=\"content\"]/div[2]/div[1]", "xpath", "Correct message not displayed");
 		}
 		}
 

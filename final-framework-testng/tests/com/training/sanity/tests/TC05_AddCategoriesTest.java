@@ -99,7 +99,7 @@ import com.training.pom.LoginPOM;
 		categoriesPOM.clickSaveIcon();
 		Thread.sleep(2000L);
 		screenShot.captureScreenShot("Category Saved");
-		//gc.assertText("Success: You have modified categories!", "//*[@id=\"content\"]/div[2]/div[1]", "xpath", "Correct message not displayed");
+		gc.assertText("Success: You have modified categories!", "//*[@id=\"content\"]/div[2]/div[1]", "xpath", "Correct message not displayed");
 	}
 		}
 

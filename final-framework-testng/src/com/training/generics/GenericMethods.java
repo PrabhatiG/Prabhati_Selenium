@@ -102,28 +102,30 @@ public class GenericMethods {
 		
 		if(type.equals("id")){
 			String actualText = driver.findElement(By.id(locator)).getText();
-			Assert.assertTrue(actualText.equals(expectedText),msg );
+			Assert.assertTrue(actualText.contains(expectedText),msg );
 		}else if(type.equals("class")){
 			String actualText = driver.findElement(By.className(locator)).getText();
-			Assert.assertTrue(actualText.equals(expectedText),msg );
+			Assert.assertTrue(actualText.contains(expectedText),msg );
 		}else if(type.equals("name")){
 			String actualText = driver.findElement(By.name(locator)).getText();
-			Assert.assertTrue(actualText.equals(expectedText),msg );
+			Assert.assertTrue(actualText.contains(expectedText),msg );
 		}else if(type.equals("xpath")){
 			String actualText = driver.findElement(By.xpath(locator)).getText();
-			Assert.assertTrue(actualText.equals(expectedText),msg );
+			System.out.println(actualText);
+			Assert.assertTrue(actualText.contains(expectedText),msg );
+			
 		}else if(type.equals("css")){
 			String actualText = driver.findElement(By.cssSelector(locator)).getText();
-			Assert.assertTrue(actualText.equals(expectedText),msg );
+			Assert.assertTrue(actualText.contains(expectedText),msg );
 		}else if(type.equals("tagname")){
 			String actualText = driver.findElement(By.tagName(locator)).getText();
-			Assert.assertTrue(actualText.equals(expectedText),msg );
+			Assert.assertTrue(actualText.contains(expectedText),msg );
 		}else if(type.equals("linktext")){
 			String actualText = driver.findElement(By.linkText(locator)).getText();
-			Assert.assertTrue(actualText.equals(expectedText),msg );
+			Assert.assertTrue(actualText.contains(expectedText),msg );
 		}else if(type.equals("partiallinktext")){
 			String actualText = driver.findElement(By.partialLinkText(locator)).getText();
-			Assert.assertTrue(actualText.equals(expectedText),msg );
+			Assert.assertTrue(actualText.contains(expectedText),msg );
 		}
 		
 	}
